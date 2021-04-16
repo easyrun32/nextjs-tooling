@@ -28,13 +28,13 @@ jobs:
         env:
           CI: true
 
-      - name: Frontend code eslint
+      - name: Run ESLint
         run: yarn lint
         env:
           CI: true
 
-      - name: Frontend code stylelint
-        run: yarn style-lint
+      - name: Run stylelint
+        run: yarn stylelint
         env:
           CI: true
 
