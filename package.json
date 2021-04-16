@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint .",
+    "stylelint": "npx stylelint **/*.scss"
   },
   "dependencies": {
     "next": "10.1.3",
