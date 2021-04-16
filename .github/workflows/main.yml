@@ -25,18 +25,12 @@ jobs:
       
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-        env:
-          CI: true
 
       - name: Run ESLint
         run: yarn lint
-        env:
-          CI: true
 
       - name: Run stylelint
         run: yarn stylelint
-        env:
-          CI: true
 
   deploy:
     runs-on: ubuntu-latest
@@ -51,9 +45,6 @@ jobs:
           vercel-org-id: ${{ secrets.ORG_ID}}
           vercel-project-id: ${{ secrets.PROJECT_ID}}
           vercel-project-name: 'nextjs-tooling'
-      - name: preview-url
-        run: |
-          echo ${{ steps.vercel-deployment.outputs.preview-url }}
     outputs:
       preview-url: ${{ steps.vercel-deployment.outputs.preview-url }}
 
